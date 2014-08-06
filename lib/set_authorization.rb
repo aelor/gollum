@@ -26,6 +26,7 @@ module Precious
         end
         if @_auth.provided? && @_auth.basic? && @_auth.credentials &&
             @user = detected_user(@_auth.credentials)
+            USERNAME[:username] = @_auth.credentials[0]
           return @user
         else
           response['WWW-Authenticate'] = %(Basic realm="Gollum Wiki")

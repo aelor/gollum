@@ -2,6 +2,8 @@ require 'gollum/app'
 
 GollumCyb::Application.routes.draw do
 
+  get '/logout', to: "application#logout"
+
   #Gollum related routes
   Precious::App.set(:gollum_path, Rails.root.join('wiki').to_s)
   Precious::App.set(:default_markup, :markdown) # set your favorite markup language
@@ -10,7 +12,6 @@ GollumCyb::Application.routes.draw do
 
   #
   mount Precious::App, at: '/'
-
   #new routes as rack app
 
   # The priority is based upon order of creation: first created -> highest priority.
