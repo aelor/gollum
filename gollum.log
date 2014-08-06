@@ -1,0 +1,4 @@
+Thin web server (v1.6.1 codename Death Proof)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Stopping ...
